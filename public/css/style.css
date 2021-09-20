@@ -1,0 +1,30 @@
+.filter {
+    margin-bottom: 20px;
+}
+
+.table__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.table__row {
+    border: 1px solid #cccccc;
+}
+
+.table__head {
+    width: 10%;
+    padding: 0 10px;
+}
+
+.table__cell {
+    width: 10%;
+    padding: 5px 10px;
+}
+
+.table__body .table__body {
+    padding-left: 30px;
+}
+
+.table__row {
+    display: flex;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>App</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="filter">
+            <select class="filter__active">
+                <option value="">All</option>
+                <option value="true">true</option>
+            </select>
+        </div>
+        <div class="table">
+            <div class="table__row">
+                <div class="table__head">
+                    id
+                </div>
+                <div class="table__head">
+                    balance
+                </div>
+                <div class="table__head">
+                    name
+                </div>
+                <div class="table__head">
+                    email
+                </div>
+            </div>
+            <div class="table__body">
+                {{#each items}}
+                    <div
+                        class="table__row"
+                    >
+                        <div class="table__cell">
+                            {{ id }}
+                        </div>
+                        <div class="table__cell">
+                            {{ balance }}
+                        </div>
+                        <div class="table__cell">
+                            {{ name }}
+                        </div>
+                        <div class="table__cell">
+                            {{ email }}
+                        </div>
+                    </div>
+                    {{#if items}}
+                        {{#list items}}
+                        {{/list}}
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>
